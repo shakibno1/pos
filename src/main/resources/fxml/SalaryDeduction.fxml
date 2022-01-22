@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.SalaryDeductionController">
+   <children>
+      <JFXComboBox fx:id="selling_point" layoutX="364.0" layoutY="166.0" prefHeight="49.0" prefWidth="410.0" />
+      <JFXComboBox fx:id="employee" layoutX="364.0" layoutY="217.0" prefHeight="49.0" prefWidth="410.0" />
+      <JFXComboBox fx:id="deduction_type" layoutX="364.0" layoutY="274.0" prefHeight="49.0" prefWidth="410.0" />
+      <JFXComboBox fx:id="year" layoutX="347.0" layoutY="385.0" prefHeight="49.0" prefWidth="256.0" />
+      <JFXComboBox fx:id="month" layoutX="829.0" layoutY="395.0" prefHeight="49.0" prefWidth="279.0" />
+      <JFXTextField fx:id="amount" layoutX="353.0" layoutY="438.0" maxWidth="429.0" minWidth="259.0" prefHeight="71.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font></JFXTextField>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1311.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <Label focusTraversable="false" graphicTextGap="6.0" layoutX="423.0" layoutY="4.0" text="Salary Deduction" textAlignment="CENTER" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="button_Back" focusTraversable="false" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" opacity="0.7" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="942.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="1001.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="button_AddSalaryDeduction" layoutX="535.0" layoutY="510.0" onAction="#button_AddSalaryExpense_OnAction" prefHeight="54.0" prefWidth="331.0" style="-fx-background-color: #FF6C6C;" text="Add Salary Deduction">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="salaryExpenseInsertStatus" layoutX="379.0" layoutY="577.0" prefHeight="47.0" prefWidth="716.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Text layoutX="134.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label fx:id="salaryExpenseId" layoutX="421.0" layoutY="134.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Text layoutX="101.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary Deduction Id:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="100.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deduction Type:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="130.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="126.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ledger Month:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="49.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deduction Amount:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="158.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Year:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="612.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Month:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="ledger_month" layoutX="340.0" layoutY="322.0" maxWidth="429.0" minWidth="259.0" prefHeight="71.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="button_AddSalaryDeductionType" layoutX="778.0" layoutY="269.0" onAction="#button_AddPaymentType_OnAction" prefHeight="54.0" prefWidth="236.0" style="-fx-background-color: #FF6C6C;" text="Add Deduction Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="791.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="salary" layoutX="923.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

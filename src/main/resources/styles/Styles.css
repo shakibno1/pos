@@ -1,0 +1,70 @@
+/* CSS for app */
+
+.firstPageButton:hover {
+	-fx-background-color: #004fd8;
+}
+.firstPageButton {
+	-fx-background-color: #3581ff;
+}
+.firstPageButton:focused {
+	-fx-background-color: #004fd8;
+}
+.background {
+	-fx-background-color: #ddf9f1;
+}
+.backButton {
+	-fx-background-color:     #57a6ff  ;
+}
+.backButton:hover {
+	-fx-background-color:    #84ff62;
+}
+.pbackground {
+	-fx-background-color:    #9ab9ff   ;
+}
+.cbackground {
+	-fx-background-color:        #e6a7ff       ;
+}
+.abackground {
+	-fx-background-color:         #e0b4ff        ;
+}
+.refreshButton {
+	-fx-background-color:       #57a6ff   ;
+}
+.refreshButton:hover {
+	-fx-background-color:   #84ff62  ;
+}
+.sellButton:hover {
+	-fx-background-color:     #59caff    ;
+}
+.sellButton {
+	-fx-background-color: #00adfe  ;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color:  #6be0ff ;
+}
+
+.table-view {
+	-fx-background-color:   #a0ebff  ;
+}
+.table-row-cell {
+    -fx-background: #a0ebff;
+    -fx-selection-bar: #a0ebff;
+}
+
+.table-row-cell:selected {
+    -fx-background: #6be0ff ;
+}
+
+.table-row-cell:dtta_dep {
+    -fx-text-background-color: yellow;
+    -fx-background: beige;
+} 
+.table-row-cell:dtta_dest {
+    -fx-text-background-color: orange;
+    -fx-background:red;
+} 
+ 
+  

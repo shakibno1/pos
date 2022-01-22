@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.CustomerSearchController">
+   <children>
+      <JFXTextField fx:id="customer_name" layoutX="214.0" layoutY="107.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <JFXButton fx:id="button_findCustomer" layoutX="271.0" layoutY="182.0" onAction="#button_findCustomer_OnAction" prefHeight="31.0" prefWidth="138.0" style="-fx-background-color: #FF6C6C;" text="Find Cutomer">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="55.0" prefWidth="1360.0">
+         <children>
+            <Label focusTraversable="false" graphicTextGap="6.0" layoutX="451.0" layoutY="9.0" prefHeight="47.0" prefWidth="432.0" text="Customer Search" textAlignment="CENTER" textFill="#2b018d">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buttonBack" layoutX="14.0" layoutY="13.0" onAction="#buttonBack_OnAction" opacity="0.7" styleClass="backButton" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="17.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="788.0" layoutY="30.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" focusTraversable="false" layoutX="858.0" layoutY="30.0" text="asdasd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="65.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="customer_mobile" focusTraversable="false" layoutX="213.0" layoutY="137.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <Label fx:id="warning" focusTraversable="false" layoutX="430.0" layoutY="183.0" prefHeight="33.0" prefWidth="716.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+      </Label>
+      <Text layoutX="59.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Mobile">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="28.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Selling Point">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="selling_pointCombo" layoutX="221.0" layoutY="75.0" prefHeight="25.0" prefWidth="229.0" />
+      <TableView fx:id="customerTableView" layoutX="10.0" layoutY="229.0" prefHeight="439.0" prefWidth="1281.0">
+        <columns>
+          <TableColumn fx:id="customerIdTableColumn" prefWidth="100.0" text="Customer Id" />
+          <TableColumn fx:id="customerNameTableColumn" prefWidth="186.0" text="Customer Name" />
+            <TableColumn fx:id="customerMobileTableColumn" prefWidth="184.0" text="Customer Mobile" />
+            <TableColumn fx:id="customerAddressTableColumn" prefWidth="243.0" text="Address" />
+            <TableColumn fx:id="customerPcsAmountTableColumn" prefWidth="207.0" text="Pcs / Amount" />
+            <TableColumn fx:id="customerBalanceTableColumn" prefWidth="166.0" text="Balance" />
+            <TableColumn fx:id="customerSattleBalanceTableColumn" prefWidth="180.0" text="Sattle Balance" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <DatePicker fx:id="fromDate" layoutX="615.0" layoutY="84.0" />
+      <DatePicker fx:id="toDate" layoutX="615.0" layoutY="113.0" />
+      <Text layoutX="506.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Date:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="484.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Date:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <JFXCheckBox fx:id="customerBalanceSearch" layoutX="528.0" layoutY="156.0" text="Search By Available Customer Balance">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</AnchorPane>

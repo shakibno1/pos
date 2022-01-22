@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #DAF7A6;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.PaymentInfoController">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1360.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <Label graphicTextGap="6.0" layoutX="524.0" layoutY="4.0" text="Add Payment" textAlignment="CENTER" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="button_Back" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" opacity="0.7" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="914.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" layoutX="984.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="66.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Year:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="fromAccount" layoutX="777.0" layoutY="170.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <JFXButton fx:id="button_AddPayment" layoutX="454.0" layoutY="593.0" onAction="#button_AddPayment_OnAction" prefHeight="47.0" prefWidth="229.0" style="-fx-background-color: #FF6C6C;" text="Make Payment">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="employeeInsertStatus" layoutX="169.0" layoutY="522.0" prefHeight="47.0" prefWidth="716.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Text layoutX="590.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="622.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Account:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="44.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Month:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="587.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From Account:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="paymentId" layoutX="282.0" layoutY="99.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Text layoutX="99.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Id:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Status:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="payment_year" layoutX="262.0" layoutY="154.0" prefHeight="25.0" prefWidth="250.0" />
+      <JFXComboBox fx:id="payment_month" layoutX="260.0" layoutY="211.0" prefHeight="25.0" prefWidth="250.0" />
+      <Text layoutX="585.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Id:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="665.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="toAccount" layoutX="780.0" layoutY="220.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <JFXTextField fx:id="transactionId" layoutX="781.0" layoutY="279.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <JFXTextField fx:id="amount" layoutX="781.0" layoutY="335.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <Label fx:id="paymentStatus" layoutX="273.0" layoutY="278.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="shopId" layoutX="697.0" layoutY="101.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Text fill="#fc0707" layoutX="71.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please provide correct information otherwise verification will fail and system will be locked out!!!">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

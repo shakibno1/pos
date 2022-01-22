@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.StockRealizationController">
+   <children>
+      <JFXComboBox fx:id="product_baseSelling_pointCombo" layoutX="325.0" layoutY="92.0" prefHeight="25.0" prefWidth="257.0" />
+      <JFXTextField fx:id="product_id" layoutX="320.0" layoutY="131.0" maxWidth="257.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" />
+      <JFXButton fx:id="button_RealizeProduct" layoutX="325.0" layoutY="232.0" onAction="#button_RealizeProduct_OnAction" style="-fx-background-color: #FF6C6C;" text="Realize Stock">
+         <font>
+            <Font size="25.0" />
+         </font></JFXButton>
+      <Label focusTraversable="false" layoutX="150.0" layoutY="135.0" text="Product Id: ">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Label fx:id="productInsertStatus" focusTraversable="false" layoutX="65.0" layoutY="350.0" prefHeight="30.0" prefWidth="1164.0" textFill="RED">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1287.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <JFXButton fx:id="button_Back" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="388.0" layoutY="7.0" text="Stock Realization" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="878.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="943.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label focusTraversable="false" layoutX="140.0" layoutY="89.0" text="Selling Point:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

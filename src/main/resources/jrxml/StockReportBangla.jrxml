@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2018-08-10T20:07:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyClosingSummaryReport" pageWidth="595" pageHeight="878" whenNoDataType="AllSectionsNoDetail" columnWidth="523" leftMargin="36" rightMargin="36" topMargin="72" bottomMargin="36" uuid="8bfbf5a5-e1f9-4d90-84bd-1b0590590560">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Style1" fontName=""/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="productCount" class="java.math.BigDecimal"/>
+	<parameter name="productBuying" class="java.math.BigDecimal"/>
+	<parameter name="productSelling" class="java.math.BigDecimal"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="count" class="java.math.BigDecimal"/>
+	<field name="buying" class="java.math.BigDecimal"/>
+	<field name="selling" class="java.math.BigDecimal"/>
+	<field name="productType" class="java.lang.String"/>
+	<title>
+		<band height="340" splitType="Stretch">
+			<staticText>
+				<reportElement x="204" y="3" width="130" height="50" uuid="01b5796b-364b-4b02-a024-0bae0746f49c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="37"/>
+				</textElement>
+				<text><![CDATA[রাহা]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="151" y="43" width="220" height="30" uuid="cb2ebeba-ee07-4db9-85a1-cb42bb4507b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="22"/>
+				</textElement>
+				<text><![CDATA[ফ্যাশন ফরএভার]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="-1" y="143" width="540" height="30" uuid="84fbc380-96ff-4ea4-9057-d108c0c4a832"/>
+				<textElement>
+					<font fontName="jasperreports-font-6.1.1" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="84" width="440" height="30" uuid="3feb8246-69bc-492e-acce-8b22423c900b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="22"/>
+				</textElement>
+				<text><![CDATA[স্টক প্রতিবেদন]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="276" width="250" height="30" uuid="ff1b031c-5558-4150-81a3-a4fca9018a94">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="20"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[মোট স্টক এর মূল্য (বিক্রয় মূল্য)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="251" y="216" width="288" height="30" uuid="bbb731db-e10b-4ce7-b2e0-3e0eab1b9c67">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="22"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productCount}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="251" y="246" width="288" height="30" uuid="6f924721-2428-4dca-98a1-90e50931a6f9">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="22"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productBuying}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="216" width="250" height="30" uuid="47ac946e-6a29-4ddd-ac40-9aec7531c1ef">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="22"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[মোট স্টক এর পরিমাণ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="246" width="250" height="30" uuid="c22123b8-84c8-4b59-8d3b-30559f0d6bf3">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="20"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[মোট স্টক এর মূল্য (ক্রয় মূল্য)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="251" y="276" width="288" height="30" uuid="93d35fd4-4b65-4300-b8f8-ac515cf06689">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="22"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productSelling}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40">
+			<staticText>
+				<reportElement style="Style1" x="0" y="0" width="181" height="40" uuid="f8ce44da-b97b-4184-94c8-9e4ecbf5c7e6"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="16"/>
+				</textElement>
+				<text><![CDATA[প্রোডাক্ট টাইপ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="0" width="120" height="40" uuid="ad568b6d-c067-4dd4-8f1e-7c6319669703">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="16"/>
+				</textElement>
+				<text><![CDATA[স্টক এর পরিমাণ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="0" width="120" height="40" uuid="64868372-a669-4c94-a56c-0c323cdc1d40">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="16"/>
+				</textElement>
+				<text><![CDATA[ক্রয় মূল্য]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="0" width="120" height="40" uuid="0401b4af-a9bb-4f4e-a084-eabb71718fb1">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="jasperreports-font-6.1.1" size="16"/>
+				</textElement>
+				<text><![CDATA[বিক্রয় মূল্য]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="50">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="181" height="50" uuid="5bf0e8d6-6fe5-4b0a-905c-71afc9b0bc1c"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{productType}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="181" y="0" width="120" height="50" uuid="398293e6-9313-45dd-b88e-e82ebbeeead6"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="301" y="0" width="120" height="50" uuid="741e446e-4dd9-4c70-9e96-f580a21dde38"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{buying}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="421" y="0" width="120" height="50" uuid="d40ca337-fd53-4f17-ad4a-8e67ef9b6386"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="16"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{selling}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="451" y="0" width="100" height="20" uuid="a1e5d77d-9b2f-4c83-baf0-d99cf7bf0113"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="230" height="20" uuid="2e8d7d89-9f32-4cdb-9ab2-97d12c4c0ba3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[NOW( )]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

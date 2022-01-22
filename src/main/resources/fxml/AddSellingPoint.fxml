@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.ShopController">
+   <children>
+      <JFXTextField fx:id="product_selling_point" layoutX="387.0" layoutY="91.0" maxWidth="259.0" minWidth="259.0" prefHeight="31.0" prefWidth="259.0" />
+      <JFXTextArea fx:id="address" layoutX="778.0" layoutY="99.0" />
+      <JFXButton fx:id="button_AddProductSellingPoint" layoutX="112.0" layoutY="178.0" onAction="#button_AddProductSellingPoint_OnAction" prefHeight="47.0" prefWidth="281.0" style="-fx-background-color: #FF6C6C;" text="Add Product Selling Point">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1360.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <Label focusTraversable="false" layoutX="494.0" layoutY="4.0" text="Add Shop">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="button_Back" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="855.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="date" focusTraversable="false" layoutX="920.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="22.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Selling Point Name: ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="productInsertStatus" focusTraversable="false" layoutX="14.0" layoutY="237.0" prefHeight="54.0" prefWidth="756.0" textFill="RED">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="662.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address: ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableView" layoutX="19.0" layoutY="357.0" prefHeight="291.0" prefWidth="1134.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" prefWidth="111.0" text="ID" />
+          <TableColumn fx:id="sellingPointNameTableColumn" prefWidth="343.0" text="Selling Point" />
+            <TableColumn fx:id="sellingPointAddressTableColumn" prefWidth="346.0" text="Address" />
+            <TableColumn fx:id="updateTableColumn" prefWidth="172.0" text="Update" />
+            <TableColumn fx:id="deleteTableColumn" prefWidth="130.0" text="Delete" />
+        </columns>
+      </TableView>
+      <Text layoutX="40.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Selling Point Id: ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="shopId" layoutX="354.0" layoutY="138.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.ExpenseController">
+   <children>
+      <JFXTextField fx:id="expense_amount" layoutX="390.0" layoutY="461.0" maxWidth="429.0" minWidth="259.0" prefHeight="71.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="expenseType" layoutX="388.0" layoutY="180.0" prefHeight="69.0" prefWidth="410.0" />
+      <JFXComboBox fx:id="merchant" layoutX="398.0" layoutY="265.0" prefHeight="69.0" prefWidth="410.0" />
+      <JFXButton fx:id="button_AddExpense" layoutX="601.0" layoutY="576.0" onAction="#button_AddExpense_OnAction" prefHeight="47.0" prefWidth="229.0" style="-fx-background-color: #FF6C6C;" text="Add Expense">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="expenseId" focusTraversable="false" layoutX="365.0" layoutY="134.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Text layoutX="181.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Id:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="142.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Type:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="button_AddExpenseType" focusTraversable="false" layoutX="835.0" layoutY="298.0" onAction="#button_AddExpenseType_OnAction" prefHeight="54.0" prefWidth="299.0" style="-fx-background-color: #FF6C6C;" text="Add Expense Type">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="204.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Merchant:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="114.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Amount:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label fx:id="expenseInsertStatus" focusTraversable="false" layoutX="379.0" layoutY="634.0" prefHeight="47.0" prefWidth="716.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1360.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <Label focusTraversable="false" graphicTextGap="6.0" layoutX="588.0" layoutY="4.0" text="Expense" textAlignment="CENTER" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="button_Back" focusTraversable="false" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" opacity="0.7" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="840.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="899.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="160.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Date:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="expenseDate" layoutX="399.0" layoutY="404.0" />
+      <Text layoutX="625.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Takes Current Date As Default if Blank)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

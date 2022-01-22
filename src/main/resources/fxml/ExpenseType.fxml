@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.ExpenseTypeController">
+   <children>
+      <JFXTextField fx:id="expense_type" layoutX="352.0" layoutY="140.0" maxWidth="429.0" minWidth="259.0" prefHeight="71.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="button_AddExpenseType" layoutX="535.0" layoutY="220.0" onAction="#button_AddExpenseType_OnAction" prefHeight="54.0" prefWidth="331.0" style="-fx-background-color: #FF6C6C;" text="Add Expense Type">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1289.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <JFXButton fx:id="button_Back" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" opacity="0.7" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" graphicTextGap="6.0" layoutX="481.0" layoutY="4.0" text="Add Expense Type" textAlignment="CENTER" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="969.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="1028.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="expenseTypeInsertStatus" focusTraversable="false" layoutX="346.0" layoutY="285.0" prefHeight="47.0" prefWidth="716.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Text layoutX="134.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Type:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label fx:id="expenseTypeId" focusTraversable="false" layoutX="365.0" layoutY="88.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Text layoutX="101.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expense Type Id:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableView" layoutX="21.0" layoutY="334.0" prefHeight="330.0" prefWidth="665.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" prefWidth="147.0" text="Id" />
+          <TableColumn fx:id="expenseTableColumn" prefWidth="359.0" text="Expense Type" />
+            <TableColumn fx:id="updateTableColumn" prefWidth="137.0" text="UPDATE" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.EditProductController">
+   <children>
+      <JFXComboBox fx:id="product_selling_pointCombo" layoutX="240.0" layoutY="98.0" prefHeight="25.0" prefWidth="257.0" />
+      <JFXTextField fx:id="product_id" layoutX="240.0" layoutY="140.0" maxWidth="257.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" />
+      <JFXTextField fx:id="product_quantity" layoutX="240.0" layoutY="240.0" prefWidth="257.0" />
+      <JFXTextField fx:id="product_selling_price" layoutX="240.0" layoutY="315.0" prefWidth="257.0" />
+      <JFXButton fx:id="button_EditProduct" layoutX="754.0" layoutY="498.0" onAction="#button_EditProduct_OnAction" style="-fx-background-color: #FF6C6C;" text="Edit Product">
+         <font>
+            <Font size="25.0" />
+         </font></JFXButton>
+      <Label focusTraversable="false" layoutX="15.0" layoutY="146.0" text="Product Id: ">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label focusTraversable="false" layoutX="15.0" layoutY="243.0" text="Quantity Left In Stock: ">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label focusTraversable="false" layoutX="15.0" layoutY="317.0" text="Selling Price: ">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label focusTraversable="false" layoutX="15.0" layoutY="357.0" text="Size:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label fx:id="productInsertStatus" focusTraversable="false" layoutX="252.0" layoutY="609.0" prefWidth="700.0" textFill="RED">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1287.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <JFXButton fx:id="button_Back" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="539.0" layoutY="3.0" text="Edit Product" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="878.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="943.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="15.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Merchant: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Label focusTraversable="false" layoutX="15.0" layoutY="280.0" text="Buying Price: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text fx:id="size" layoutX="240.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="merchant" layoutX="240.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label focusTraversable="false" layoutX="15.0" layoutY="100.0" text="Selling Point:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="product_buying_price" layoutX="240.0" layoutY="275.0" prefWidth="257.0" />
+      <Label focusTraversable="false" layoutX="15.0" layoutY="195.0" text="Product Type:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="product_type" layoutX="240.0" layoutY="192.0" prefHeight="25.0" prefWidth="257.0" />
+      <TableView fx:id="productEditTableView" layoutX="520.0" layoutY="100.0" prefHeight="365.0" prefWidth="765.0" style="-fx-background-color: white;">
+         <columns>
+            <TableColumn fx:id="productEditNumberTableColumn" prefWidth="160.0" text="Product Number" />
+            <TableColumn fx:id="productEditBuyingPriceTableColumn" prefWidth="104.0" text="Buying Price" />
+            <TableColumn fx:id="productEditSellingPriceTableColumn" prefWidth="108.0" text="Selling Price" />
+            <TableColumn fx:id="productEditSizeTableColumn" prefWidth="114.0" text="Type" />
+            <TableColumn fx:id="productEditShopTableColumn" prefWidth="113.0" text="Shop" />
+            <TableColumn fx:id="productEditMerchantTableColumn" prefWidth="90.0" text="Merchant" />
+            <TableColumn fx:id="productEditDeleteTableColumn" prefWidth="75.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="button_AddToEditProduct" layoutX="200.0" layoutY="472.0" onAction="#button_AddToEdit_OnAction" style="-fx-background-color: #FF6C6C;" text="Add To Edit">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

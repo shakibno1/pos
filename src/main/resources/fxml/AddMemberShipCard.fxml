@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.MembershipCardController">
+   <children>
+      <JFXTextField fx:id="membershipCardNumber" layoutX="372.0" layoutY="188.0" maxWidth="429.0" minWidth="259.0" prefHeight="35.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="customerId" layoutX="370.0" layoutY="238.0" maxWidth="429.0" minWidth="259.0" prefHeight="35.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="membershipCardType" layoutX="369.0" layoutY="305.0" prefHeight="35.0" prefWidth="429.0" />
+      <JFXTextField fx:id="discountPercentage" layoutX="369.0" layoutY="357.0" maxWidth="429.0" minWidth="259.0" prefHeight="48.0" prefWidth="429.0">
+         <font>
+            <Font size="30.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="button_AddMembershipCard" layoutX="335.0" layoutY="467.0" onAction="#button_AddMembershipCard_OnAction" prefHeight="48.0" prefWidth="313.0" styleClass="firstPageButton" text="Add Membership Card">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="membershipCardId" focusTraversable="false" layoutX="372.0" layoutY="144.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Text layoutX="51.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Card Id:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="170.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="4.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Card Type:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount Percentage:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label fx:id="expenseInsertStatus" focusTraversable="false" layoutX="162.0" layoutY="558.0" prefHeight="47.0" prefWidth="963.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1360.0" styleClass="pbackground">
+         <children>
+            <Label focusTraversable="false" graphicTextGap="6.0" layoutX="225.0" layoutY="11.0" text="Add Membership Card" textAlignment="CENTER" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="button_Back" focusTraversable="false" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" opacity="0.7" styleClass="backButton" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="840.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="899.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Text layoutX="12.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Card Number:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

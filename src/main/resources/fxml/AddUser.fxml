@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.UserController">
+   <children>
+      <Label layoutX="226.0" layoutY="14.0" prefHeight="58.0" prefWidth="1041.0" style="-fx-background-color: #FFA07A;" text="      Welcome to Rahi Fashion Management System">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Text layoutX="248.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Name: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Password: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="userName" layoutX="440.0" layoutY="106.0" maxWidth="513.0" minWidth="284.0" prefHeight="31.0" prefWidth="284.0" />
+      <JFXTextField fx:id="userName_real" layoutX="992.0" layoutY="106.0" maxWidth="513.0" minWidth="269.0" prefHeight="31.0" prefWidth="269.0" />
+      <JFXTextField fx:id="password" layoutX="275.0" layoutY="144.0" maxWidth="505.0" minWidth="237.0" prefHeight="31.0" prefWidth="237.0" />
+      <JFXTextField fx:id="mobile" layoutX="634.0" layoutY="146.0" maxWidth="505.0" minWidth="205.0" prefHeight="31.0" prefWidth="224.0" />
+      <JFXTextField fx:id="address" layoutX="998.0" layoutY="147.0" maxWidth="505.0" minWidth="284.0" prefHeight="31.0" prefWidth="284.0" />
+      <JFXTextField fx:id="reference" layoutX="190.0" layoutY="189.0" maxWidth="505.0" minWidth="247.0" prefHeight="31.0" prefWidth="247.0" />
+      <JFXComboBox fx:id="product_selling_point" layoutX="751.0" layoutY="186.0" prefHeight="25.0" prefWidth="235.0" />
+      <JFXCheckBox fx:id="administrativePrivilege" layoutX="988.0" layoutY="182.0" prefHeight="35.0" prefWidth="296.0" text="Administrative Privilege">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXButton fx:id="addUser" layoutX="858.0" layoutY="223.0" onAction="#addUser" prefHeight="45.0" prefWidth="237.0" style="-fx-background-color: #FF6C6C;" text="Add User">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="522.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="862.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text layoutX="30.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reference: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="back" layoutX="31.0" layoutY="19.0" onAction="#back" prefHeight="35.0" prefWidth="161.0" style="-fx-background-color: #000080;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="443.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Selling Point: ">
+         <font>
+            <Font size="28.0" />
+         </font></Text>
+      <Text fx:id="status" fill="RED" layoutX="6.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="833.0">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="732.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter User Name: ">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableView" layoutX="10.0" layoutY="277.0" prefHeight="397.0" prefWidth="1266.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nameTableColumn" prefWidth="105.0" text="Name" />
+            <TableColumn fx:id="userNameTableColumn" prefWidth="114.0" text="User Name" />
+            <TableColumn fx:id="passwordTableColumn" prefWidth="106.0" text="Password" />
+            <TableColumn fx:id="mobileTableColumn" prefWidth="108.0" text="Mobile" />
+            <TableColumn fx:id="addressTableColumn" prefWidth="128.0" text="Address" />
+            <TableColumn fx:id="product_selling_point_idTableColumn" prefWidth="184.0" text="Selling Point" />
+            <TableColumn fx:id="referenceTableColumn" prefWidth="129.0" text="Reference" />
+            <TableColumn fx:id="privilegeTableColumn" prefWidth="86.0" text="Priviledge" />
+            <TableColumn fx:id="updateTableColumn" prefWidth="106.0" text="Update" />
+            <TableColumn fx:id="deleteTableColumn" prefWidth="101.0" text="Delete" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="deleteUsers" mnemonicParsing="false" onAction="#deleteUsers" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Label fx:id="userId" layoutX="147.0" layoutY="107.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Text layoutX="23.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id:">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

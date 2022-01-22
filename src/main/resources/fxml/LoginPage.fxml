@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" styleClass="background" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.LoginController">
+   <children>
+      <Text fill="#19637c" layoutX="288.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name: ">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Text>
+      <Text fill="#19637c" layoutX="288.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password: ">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Text>
+      <JFXTextField fx:id="userName" layoutX="514.0" layoutY="215.0" maxWidth="375.0" minWidth="375.0" prefHeight="71.0" prefWidth="375.0" promptText="Enter Username">
+         <font>
+            <Font size="25.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="password" layoutX="514.0" layoutY="310.0" maxWidth="375.0" minWidth="375.0" onAction="#button_login_OnAction" prefHeight="59.0" prefWidth="375.0" promptText="Enter Password">
+         <font>
+            <Font size="25.0" />
+         </font></JFXPasswordField>
+      <JFXButton fx:id="login" layoutX="524.0" layoutY="449.0" onAction="#button_login_OnAction" styleClass="firstPageButton" text="LOGIN TO SYSTEM" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="40.0" layoutY="24.0" prefHeight="94.0" prefWidth="1138.0" text="                 Welcome to Taha Shop Management System" textAlignment="CENTER" textFill="#0456c9" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Label>
+      <Label fx:id="warning" layoutX="642.0" layoutY="523.0" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="payment" layoutX="825.0" layoutY="449.0" onAction="#button_payment_OnAction" styleClass="firstPageButton" text="MAKE PAYMENT" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#da3a00" layoutX="987.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version 2.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>

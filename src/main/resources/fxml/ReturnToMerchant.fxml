@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="1300.0" scaleShape="false" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.ReturnToMerchantController">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="49.0" prefHeight="80.0" prefWidth="1264.0" style="-fx-background-color: #FF9173;">
+         <children>
+            <Text layoutX="24.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product No:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="product_number" layoutX="158.0" layoutY="18.0" maxWidth="461.0" minWidth="286.0" prefHeight="31.0" prefWidth="286.0" />
+            <Text layoutX="485.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="product_selling_point" layoutX="563.0" layoutY="24.0" prefHeight="25.0" prefWidth="321.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="button_sell" layoutX="606.0" layoutY="457.0" onAction="#button_sell_OnAction" prefHeight="86.0" prefWidth="212.0" style="-fx-background-color: #FF1C1C; -fx-focus-color: #2bff00;" text="Return">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="40.0" prefWidth="1293.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <Text layoutX="350.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return To Merchant" textAlignment="CENTER" wrappingWidth="321.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="905.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="date" layoutX="979.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="buttonBack" layoutX="14.0" layoutY="1.0" onAction="#buttonBack_OnAction" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </JFXButton>
+            <Text fx:id="sellingPoingName" layoutX="672.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Text>
+            <JFXButton fx:id="button_Refresh" layoutX="131.0" layoutY="1.0" onAction="#buttonRefresh_OnAction" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: #0F0FE0;" text="REFRESH" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label fx:id="sellingStatus" layoutX="750.0" layoutY="560.0" textFill="RED">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="161.0" prefHeight="280.0" prefWidth="1278.0" style="-fx-background-color: #C3FF98;">
+         <children>
+            <TableView fx:id="productTableView" layoutX="2.0" layoutY="2.0" prefHeight="271.0" prefWidth="1264.0" style="-fx-background-color: #E5E7E9;">
+              <columns>
+                <TableColumn fx:id="productNumberTableColumn" prefWidth="241.0" text="Product Number" />
+                <TableColumn fx:id="productQuantityTableColumn" prefWidth="143.0" text="Quantity" />
+                  <TableColumn fx:id="productQuantityLeftInStockTableColumn" prefWidth="195.0" text="Quantity Left In Stock" />
+                  <TableColumn fx:id="productSizeTableColumn" prefWidth="91.0" text="Size" />
+                  <TableColumn fx:id="productDescriptionTableColumn" prefWidth="286.0" text="Merchant" />
+                  <TableColumn fx:id="productPriceTableColumn" prefWidth="194.0" text="Buying Price" />
+                  <TableColumn fx:id="productDeleteTableColumn" prefWidth="92.0" text="Delete" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <TableView fx:id="sizeQuantityTableView" layoutX="15.0" layoutY="450.0" prefHeight="161.0" prefWidth="461.0">
+        <columns>
+          <TableColumn fx:id="sizeTableColumn" prefWidth="238.0" text="Size" />
+          <TableColumn fx:id="quantityTableColumn" minWidth="0.0" prefWidth="271.0" text="Quantity" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

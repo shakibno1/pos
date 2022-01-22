@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
+<!-- 2018-10-15T23:38:42 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DailyClosingSummaryReport" pageWidth="595" pageHeight="878" whenNoDataType="AllSectionsNoDetail" columnWidth="523" leftMargin="36" rightMargin="36" topMargin="72" bottomMargin="36" uuid="8bfbf5a5-e1f9-4d90-84bd-1b0590590560">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="inch"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="inch"/>
+	<style name="Style1" fontName="Bangla"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="productCountTotal" class="java.math.BigDecimal"/>
+	<parameter name="productCountAvailable" class="java.math.BigDecimal"/>
+	<parameter name="productBuyingAvailable" class="java.math.BigDecimal"/>
+	<parameter name="productBuyingTotal" class="java.math.BigDecimal"/>
+	<parameter name="productSellingAvailable" class="java.math.BigDecimal"/>
+	<parameter name="productSellingTotal" class="java.math.BigDecimal"/>
+	<parameter name="merchantPayment" class="java.math.BigDecimal"/>
+	<parameter name="merchantBalance" class="java.math.BigDecimal"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="749" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="3" width="130" height="50" uuid="01b5796b-364b-4b02-a024-0bae0746f49c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="37"/>
+				</textElement>
+				<text><![CDATA[RAHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="43" width="220" height="30" uuid="cb2ebeba-ee07-4db9-85a1-cb42bb4507b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[FASHION FOREVER]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="143" width="540" height="30" uuid="84fbc380-96ff-4ea4-9057-d108c0c4a832"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="84" width="440" height="30" uuid="3feb8246-69bc-492e-acce-8b22423c900b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Merchant Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="0" y="230" width="250" height="30" uuid="47ac946e-6a29-4ddd-ac40-9aec7531c1ef">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Stock Total Count ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="0" y="260" width="250" height="30" uuid="c22123b8-84c8-4b59-8d3b-30559f0d6bf3">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Stock Available Count ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Style1" x="0" y="338" width="250" height="30" uuid="ff1b031c-5558-4150-81a3-a4fca9018a94">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Stock Available (Buying Price)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="250" y="338" width="288" height="30" uuid="93d35fd4-4b65-4300-b8f8-ac515cf06689">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productBuyingAvailable}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="250" y="260" width="288" height="30" uuid="6f924721-2428-4dca-98a1-90e50931a6f9">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productCountAvailable}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement x="250" y="230" width="288" height="30" uuid="bbb731db-e10b-4ce7-b2e0-3e0eab1b9c67">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productCountTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="0" y="308" width="250" height="30" uuid="416af604-ba75-495e-8637-bc6d79e8e4d8">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Stock Total (Buying Price)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="250" y="308" width="288" height="30" uuid="5ee340ba-2cf3-4db7-8f65-7d607ec59485">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productBuyingTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="1" y="418" width="250" height="30" uuid="c2e8f265-ee20-4113-a566-089e4e0ba628">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Stock Available (Selling Price)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="251" y="418" width="288" height="30" uuid="e80d71e0-a168-40ef-9f94-60986caabdc8">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productSellingAvailable}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="1" y="388" width="250" height="30" uuid="3223d6a5-18c9-4f8f-953c-655bc14e27ce">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Stock Total (Selling Price)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="251" y="388" width="288" height="30" uuid="aadc60fc-e195-4a33-bcc9-872b6ccc98f7">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{productSellingTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="0" y="482" width="250" height="30" uuid="775a82ee-9586-4f38-8974-6e8a2203fdfc">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Total Paid Amount]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="250" y="482" width="288" height="30" uuid="026610d9-9268-49ee-af71-02cb34a3d4a0">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{merchantPayment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Style1" x="0" y="512" width="250" height="30" uuid="5a614ce4-0614-4706-bacb-6c6f9c0a2a1d">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<text><![CDATA[Merchant Balance]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="#,##0.##;(#,##0.##)" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="250" y="512" width="288" height="30" uuid="3f69c7c6-cd6a-4e50-926d-36f0156684fd">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.25"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{merchantBalance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20">
+			<textField>
+				<reportElement x="452" y="0" width="100" height="20" uuid="a1e5d77d-9b2f-4c83-baf0-d99cf7bf0113"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="0" width="230" height="20" uuid="2e8d7d89-9f32-4cdb-9ab2-97d12c4c0ba3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[NOW( )]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

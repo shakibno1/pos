@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.labs.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.GoodReceiveController">
+   <children>
+      <JFXTextField fx:id="product_id" layoutX="320.0" layoutY="131.0" maxWidth="257.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" />
+      <Label focusTraversable="false" layoutX="150.0" layoutY="135.0" text="Product Id: ">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Label fx:id="productInsertStatus" focusTraversable="false" layoutX="450.0" layoutY="250.0" textFill="RED">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="3.0" layoutY="3.0" prefHeight="80.0" prefWidth="1287.0" style="-fx-background-color: #FFA07A;">
+         <children>
+            <JFXButton fx:id="button_Back" layoutX="14.0" layoutY="13.0" onAction="#button_Back_OnAction" style="-fx-background-color: #000080;" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label focusTraversable="false" layoutX="457.0" layoutY="7.0" text="Goods Transfer" textFill="#2b018d">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="878.0" layoutY="22.0" text="Date: ">
+               <font>
+                  <Font name="System Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentDateTime" focusTraversable="false" layoutX="943.0" layoutY="22.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="productTableView" layoutX="21.0" layoutY="295.0" prefHeight="271.0" prefWidth="940.0" style="-fx-background-color: #E5E7E9;">
+         <columns>
+            <TableColumn fx:id="productNumberTableColumn" prefWidth="181.0" text="Product Number" />
+            <TableColumn fx:id="productQuantityTableColumn" prefWidth="84.0" text="Quantity" />
+            <TableColumn fx:id="productQuantityLeftInStockTableColumn" prefWidth="188.0" text="Quantity Left In Stock" />
+            <TableColumn fx:id="productSizeTableColumn" prefWidth="82.0" text="Size" />
+            <TableColumn fx:id="productDescriptionTableColumn" prefWidth="161.0" text="Description" />
+            <TableColumn fx:id="productPriceTableColumn" prefWidth="148.0" text="Amount" />
+            <TableColumn fx:id="productDeleteTableColumn" prefWidth="92.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="button_ReceiveProduct" layoutX="632.0" layoutY="159.0" onAction="#button_ReceiveProduct_OnAction" style="-fx-background-color: #FF6C6C;" text="Receive Product">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label focusTraversable="false" layoutX="94.0" layoutY="207.0" text="Transfer Batch:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="transfer_Batch" layoutX="317.0" layoutY="203.0" maxWidth="257.0" minWidth="257.0" prefHeight="31.0" prefWidth="257.0" />
+   </children>
+</AnchorPane>

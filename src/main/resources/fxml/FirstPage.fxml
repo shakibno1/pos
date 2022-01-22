@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="764.0" prefWidth="1331.0" styleClass="background" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codetreatise.controller.FirstPageController">
+   <children>
+      <Label layoutX="126.0" layoutY="13.0" prefHeight="90.0" prefWidth="1117.0" text="                  Taha Shop Management System" textFill="#0456c9">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Label>
+      <JFXButton fx:id="button_SellItem" layoutX="59.0" layoutY="193.0" onAction="#button_SellItem_OnAction" prefHeight="38.0" prefWidth="250.0" ripplerFill="#00f06c" styleClass="firstPageButton" text="SELL" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_AddItem" layoutX="659.0" layoutY="469.0" onAction="#button_AddItem_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="ADD ITEM" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_AddUser" layoutX="59.0" layoutY="469.0" onAction="#button_AddUser_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="ADD USER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_ReturnItem" layoutX="359.0" layoutY="379.0" onAction="#button_ReturnItem_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="RETURN TO MERCHANT" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_Back" layoutX="22.0" layoutY="27.0" onAction="#button_Back_OnAction" styleClass="backButton" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fx:id="user_name" fill="#024cb2" layoutX="1107.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#024cb2" layoutX="1000.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome : ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#024cb2" layoutX="1038.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="product_selling_point" fill="#024cb2" layoutX="1106.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="button_AddSellingPoint" layoutX="59.0" layoutY="379.0" onAction="#button_AddSellingPoint_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="ADD SHOP" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_Employee" layoutX="359.0" layoutY="469.0" onAction="#button_AddEmployee_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="ADD EMPLOYEE" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_AddExpense" layoutX="359.0" layoutY="193.0" onAction="#button_AddExpense_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="EXPENSE" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_AddSalaryExpense" layoutX="659.0" layoutY="193.0" onAction="#button_AddSalaryExpense_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="SALARY EXPENSE" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_GeneralReport" layoutX="950.0" layoutY="193.0" onAction="#button_GeneralReport_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="GENERAL REPORT" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_AllReport" layoutX="950.0" layoutY="469.0" onAction="#button_AllReport_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="ALL REPORT" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fx:id="warning" fill="RED" layoutX="85.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="button_EditStock" layoutX="659.0" layoutY="379.0" onAction="#button_EditStock_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="EDIT STOCK" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_GoodTransfer" layoutX="359.0" layoutY="287.0" onAction="#button_GoodTransfer_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="STOCK TRANSFER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_AddSalaryDeduction" layoutX="659.0" layoutY="287.0" onAction="#button_SalaryDeduction_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="SALARY DEDUCTION" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="button_StockRealization" layoutX="950.0" layoutY="379.0" onAction="#button_StockRealization_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="Stock Realization" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="button_FindBuyingPrice" layoutX="950.0" layoutY="287.0" onAction="#button_FindBuyingPrice_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="Find Buying Price" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="button_CustomerSearch" layoutX="59.0" layoutY="287.0" onAction="#button_SearchCustomer_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="Customer Search" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="button_MembershipCard" layoutX="59.0" layoutY="548.0" onAction="#button_AddMembershipCard_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="ADD MEMBERSHIP" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="button_PaymentInfo" layoutX="359.0" layoutY="548.0" onAction="#button_AddPaymentInfo_OnAction" prefHeight="38.0" prefWidth="250.0" styleClass="firstPageButton" text="Payment" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
